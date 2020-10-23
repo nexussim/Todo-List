@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <h1>My Todos:</h1>
+            </div>
+            <div onclick="handlers.toggleCompletedListener(event)">
+                <ul id="todoList" onclick="handlers.deleteTodoListener(event)">
+                </ul>
+            </div>
+           
+                <div>
+                    <button id="addTodoButton" class="buttons" onclick="handlers.addTodoListener(event)">Add Todo</button>
+                </div>
+                <div>
+                    <input id="newTodo" placeholder="Enter a todo..."type="text" autofocus onkeyup="handlers.addTodoListener(event)">
+                </div>
+                <div>
+                    <button id="changeTodoButton" class="buttons" onclick="handlers.changeTodoListener()">Change Todo</button>
+                </div>
+                <div>
+                    <input id="changeTodoText" placeholder="Enter new todo ..."type="text">
+                </div>
+                <div>
+                    <input id="changeTodoPosition" placeholder="Enter todo position..."type="text">
+                    <div>
+                        <h3 id="alertText"></h3>
+                    </div>
+                </div>
+                <div>
+                    <p>Click a todo to mark as complete.</p>
+                </div>
+            
+                <div>
+                    <button id="clearCompleted" onclick="handlers.clearCompletedListener(event)">Clear completed</button>
+                </div>
+        </div>  
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>
